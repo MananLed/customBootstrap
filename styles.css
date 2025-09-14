@@ -1,0 +1,81 @@
+:root {
+    --div-bg: aqua;
+    --div-border: black;
+    --btn-bg: blue;
+    --btn-color: rgb(223, 188, 193);
+    --btn-hover-bg: lightblue;
+}
+
+body {
+    margin: 1;
+    font-family: Arial, sans-serif;
+}
+
+.heading {
+    background: var(--div-bg);
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.parent {
+    gap: 1rem;
+}
+
+.child {
+    background-color: var(--div-bg);
+    border: 1px solid var(--div-border);
+    height: 144px;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.child button {
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    height: 25px;
+}
+
+button:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+
+@media only screen and (max-width: 576px) {
+    .xs-grid-cols-1 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .sm-grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .md-grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .lg-grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
